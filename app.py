@@ -83,7 +83,7 @@ def calculate_gains_losses():
 
 # Home page
 if page == "Home":
-    st.markdown("Welcome to the Stock Information App!")
+    st.markdown("**Welcome to the Stock Information App!**")
     st.write("This app is designed to provide you with real-time insights into the stock market, including detailed information about individual stocks, ETFs, and major market indices. Whether you're a seasoned investor or just starting your financial journey, our user-friendly interface allows you to easily track your investments, analyze market trends, and stay updated with the latest financial news.")
     st.title('Stock Information')
     stock_symbol = st.text_input("Enter Stock Symbol", "AAPL")
