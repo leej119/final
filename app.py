@@ -83,6 +83,8 @@ def calculate_gains_losses():
 
 # Home page
 if page == "Home":
+    st.markdown("Welcome to the Stock Information App!")
+    st.write("This app is designed to provide you with real-time insights into the stock market, including detailed information about individual stocks, ETFs, and major market indices. Whether you're a seasoned investor or just starting your financial journey, our user-friendly interface allows you to easily track your investments, analyze market trends, and stay updated with the latest financial news.")
     st.title('Stock Information')
     stock_symbol = st.text_input("Enter Stock Symbol", "AAPL")
     if stock_symbol:
@@ -148,12 +150,6 @@ elif page == "ETF Information":
 
             st.subheader(f"{info.get('longName', etf_ticker)} ({etf_ticker})")
 
-            # Handle expense ratio
-            expense_ratio = info.get('expenseRatio', info.get('annualReportExpenseRatio', None))
-            if expense_ratio is not None and isinstance(expense_ratio, (int, float)):
-                st.write(f"Expense Ratio: {expense_ratio:.2%}")
-            else:
-                st.write("Expense Ratio: Information not available")
             
             dividend_rate = info.get('dividendRate', None)
             trailing_annual_dividend_rate = info.get('trailingAnnualDividendRate', None)
